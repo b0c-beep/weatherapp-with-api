@@ -1,7 +1,11 @@
+*{
+    font-family: JetBrains Mono;
+}
+
 body {
     background: linear-gradient(-45deg, #dcf5a5, #d3ffce, #23a6d5, #23d5ab);
     background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
+    animation: gradient 10s ease infinite;
     height: 100vh;
   }
   
@@ -16,3 +20,45 @@ body {
       background-position: 0% 50%;
     }
   }
+
+  .main-container{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    padding: 20px 50px;
+  }
+
+
+.title-and-search{
+
+}
+
+.title-header{
+    font-size: 42px;
+}
+
+#city{
+    border-radius: 10px;
+    opacity: 70%;
+    width: 30vw;
+    height: 3vh;
+    background-color: #fcf9e9;
+}
+
+.result-card{
+    height: 40vh;
+    width: 20%;
+    border-radius: 20px;
+    margin-top: 15vh;
+    opacity: 60%;
+    background-color: #fcf9e9;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+  }
+
