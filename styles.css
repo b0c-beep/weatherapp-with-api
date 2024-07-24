@@ -31,12 +31,37 @@ body {
   }
 
 
-.title-and-search{
-
-}
-
 .title-header{
     font-size: 42px;
+}
+
+.searchbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 30vw;
+}
+
+.searchbar input {
+    border: 0;
+    outline: 0;
+}
+
+.searchbar button {
+    border: 0;
+    outline: 0;
+    background:#fcf9e9;
+    opacity: 60%;
+    border-radius: 25px;
+    width: 30px;    
+    height: 30px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.searchbar button img{
+    width: 16px;
+    height: 16px;
 }
 
 #city{
