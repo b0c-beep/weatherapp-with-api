@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link href='https://fonts.googleapis.com/css?family=JetBrains Mono' rel='stylesheet'>
-    <script src="api.js"></script>
+    
     <title>Weather App</title>
 </head>
 <body>
@@ -17,14 +17,14 @@
                     <input type="text" name="city" id="city" placeholder="your city name">
                     <button class="search-button"><img src="resources/search.png" alt=""></button>
                 </div>
-                
             </div>
             <div class="result-card">
                 <h2 class="city-name">Undefined</h2>
-                <img src="resources/clouds.svg" alt="">
+                <img id="weather-icon" src="" alt="">
                 <h2 class="temp">0°C</h2>
             </div>
         </div>
     </div>
+    <script src="api.js"></script>
 </body>
 </html>
