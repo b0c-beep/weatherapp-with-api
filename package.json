@@ -2,14 +2,12 @@
   "name": "weatherapp-with-api",
   "version": "1.0.0",
   "main": "api.js",
-  "scripts": {
-    
-  },
+  "scripts": {},
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "dotenv": "^16.4.5"
+    "firebase": "^10.12.4"
   }
 }
