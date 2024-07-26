@@ -1,10 +1,7 @@
-import initSqlJs from 'https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.5.0/sql-wasm.js';
+const initSqlJs = window.initSqlJs;
 
-//export const axios = import("axios");
-//export const sqlite3 = import("sqlite3").verbose();
-
-export async function storeWeatherData(city, data){
-  const SQL = await initSqlJs({ locateFile: file => `https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.5.0/${file}` });
+export async function storeWeatherData(city, data) {
+    const SQL = await initSqlJs({ locateFile: file => `https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.5.0/${file}` });
     const db = new SQL.Database();
 
     db.run(`CREATE TABLE IF NOT EXISTS weather (id INTEGER PRIMARY KEY AUTOINCREMENT, city TEXT, data TEXT)`);
