@@ -7,8 +7,8 @@ export async function storeWeatherData(city, data) {
     db.run(`CREATE TABLE IF NOT EXISTS weather (id INTEGER PRIMARY KEY AUTOINCREMENT, city TEXT, data TEXT)`);
     db.run(`INSERT INTO weather (city, data) VALUES (?, ?)`, [city, JSON.stringify(data)]);
 
-    const res = db.exec("SELECT * FROM weather");
-    console.log(JSON.stringify(res, null, 2));
+    //const res = db.exec("SELECT * FROM weather");
+    //console.log(JSON.stringify(res, null, 2));
 
     db.close();
 }
