@@ -1,4 +1,4 @@
-import { storeWeatherData } from "./firebase.js";
+import {storeWeatherData} from "./db.js";
 
 const apiKey = "d2708d2ae07784e543955052d3ca73c8"
 const apiUrl = "https://api.openweathermap.org/data/2.5/weather?appid=" + apiKey + "&units=metric&q=";
@@ -11,7 +11,7 @@ async function checkWeather(city){
     const response = await fetch(apiUrl + city);
     var data = await response.json();
 
-    await storeWeatherData(data);
+    storeWeatherData(city, data);
 
     if(data.cod != 200){
         document.querySelector(".result-card .city-name").innerHTML = "Error";

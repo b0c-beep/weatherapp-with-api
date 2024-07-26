@@ -6,8 +6,10 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
-    "firebase": "^10.12.4"
-  }
+    "axios": "^1.7.2",
+    "firebase": "^10.12.4",
+    "sqlite3": "^5.1.7"
+  },
+  "description": ""
 }
