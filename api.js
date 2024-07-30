@@ -1,4 +1,4 @@
-import { storeWeatherData } from './db.js';
+import { storeWeatherData, updateDatabase } from './db.js';
 
 const apiKey = 'd2708d2ae07784e543955052d3ca73c8'; // Replace with your actual API key
 const apiUrl = `https://api.openweathermap.org/data/2.5/weather?appid=${apiKey}&units=metric&q=`;
@@ -12,6 +12,7 @@ async function checkWeather(city) {
     const data = await response.json();
 
     storeWeatherData(city, data);
+    updateDatabase();
 
     if (data.cod != 200) {
         document.querySelector('.result-card .city-name').innerHTML = 'Error';
