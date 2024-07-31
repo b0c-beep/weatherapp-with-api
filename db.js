@@ -1,5 +1,5 @@
-import { exec } from './node_modules/child_process';
-import { promisify } from 'node_modules/util';
+import { exec } from 'child_process';
+import { promisify } from 'util';
 
 export function storeWeatherData(city, data) {
   var a = document.createElement("a");
@@ -18,6 +18,7 @@ const targetFile = 'D:/github projects/weatherapp-with-api/weatherapp-with-api/d
 
 // Construct the command to run the Python script
 const command = `python append-to-db.py ${originalFile} ${targetFile}`;
+
 
 export async function updateDatabase() {
     try {
