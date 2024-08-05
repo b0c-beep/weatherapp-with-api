@@ -10,8 +10,9 @@
   "dependencies": {
     "child_process": "^1.0.2",
     "express": "^4.19.2",
+    "fs": "^0.0.1-security",
     "node": "^20.16.0",
-    "sqlite3": "^5.1.7",
+    "path": "^0.12.7",
     "util": "^0.12.5"
   },
   "description": ""
