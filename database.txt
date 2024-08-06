@@ -344,3 +344,52 @@
     "cod": 200
   }
 }
+
+{
+  "city": "madrid",
+  "data": {
+    "coord": {
+      "lon": -3.7026,
+      "lat": 40.4165
+    },
+    "weather": [
+      {
+        "id": 800,
+        "main": "Clear",
+        "description": "clear sky",
+        "icon": "01d"
+      }
+    ],
+    "base": "stations",
+    "main": {
+      "temp": 30.99,
+      "feels_like": 29.4,
+      "temp_min": 30.36,
+      "temp_max": 32.78,
+      "pressure": 1011,
+      "humidity": 26,
+      "sea_level": 1011,
+      "grnd_level": 939
+    },
+    "visibility": 10000,
+    "wind": {
+      "speed": 2.06,
+      "deg": 100
+    },
+    "clouds": {
+      "all": 0
+    },
+    "dt": 1722938129,
+    "sys": {
+      "type": 2,
+      "id": 2007545,
+      "country": "ES",
+      "sunrise": 1722921433,
+      "sunset": 1722972247
+    },
+    "timezone": 7200,
+    "id": 3117735,
+    "name": "Madrid",
+    "cod": 200
+  }
+}
