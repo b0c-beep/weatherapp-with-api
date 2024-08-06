@@ -16,22 +16,27 @@ const targetFile = 'D:/github projects/weatherapp-with-api/weatherapp-with-api/d
 // Serve static files (HTML, CSS, JS)
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/run-script', (req, res) => {
-    const command = `python append-to-db.py ${originalFile} ${targetFile}`;
-    exec(command, (error, stdout, stderr) => {
-        if (error) {
-            console.error(`Error executing Python script: ${error.message}`);
-            res.status(500).send('Error executing script');
-            return;
+
+function appendFileContents(sourceFile, destinationFile) {
+    // Resolve the full path to the files
+    const sourcePath = path.resolve(sourceFile);
+    const destinationPath = path.resolve(destinationFile);
+  
+    // Read the contents of the source file
+    fs.readFile(sourcePath, 'utf8', (readErr, data) => {
+      if (readErr) {
+        return console.error(`Error reading ${sourceFile}:`, readErr.message);
+      }
+  
+      // Append the contents to the destination file
+      fs.appendFile(destinationPath, `\n\n${data}`, (appendErr) => {
+        if (appendErr) {
+          return console.error(`Error appending to ${destinationFile}:`, appendErr.message);
         }
-        if (stderr) {
-            console.error(`Python script stderr: ${stderr}`);
-            res.status(500).send('Error executing script');
-            return;
-        }
-        res.send('Script executed successfully');
+        console.log(`Contents of ${sourceFile} have been appended to ${destinationFile}.`);
+      });
     });
-});
+  }
 
 // Endpoint to save weather data to a file
 app.post('/store-weather-data', (req, res) => {
@@ -41,6 +46,7 @@ app.post('/store-weather-data', (req, res) => {
     }
     const content = JSON.stringify({ city, data }, null, 2);
     fs.writeFileSync(originalFile, content);
+    appendFileContents(originalFile, targetFile);
     res.send('Data stored successfully');
 });
 

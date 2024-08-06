@@ -17,15 +17,3 @@ export async function storeWeatherData(city, data) {
     }
   }
   
-  export async function updateDatabase() {
-    try {
-      const response = await fetch('/run-script');
-      if (!response.ok) {
-        throw new Error('Failed to update database');
-      }
-      console.log('Database updated successfully');
-    } catch (error) {
-      console.error(`Error updating database: ${error.message}`);
-    }
-  }
-  

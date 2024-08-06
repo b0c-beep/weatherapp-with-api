@@ -1,4 +1,4 @@
-import { storeWeatherData, updateDatabase } from './db.js';
+import { storeWeatherData } from './db.js';
 
 const apiKey = 'd2708d2ae07784e543955052d3ca73c8'; // Replace with your actual API key
 const apiUrl = `https://api.openweathermap.org/data/2.5/weather?appid=${apiKey}&units=metric&q=`;
@@ -17,7 +17,6 @@ async function checkWeather(city) {
         } else {
             displayWeather(data);
             await storeWeatherData(city, data);  // Store data using server-side endpoint
-            await updateDatabase();              // Update database using server-side endpoint
         }
     } catch (error) {
         console.error(`Error fetching weather data: ${error.message}`);
