@@ -295,3 +295,52 @@
     "cod": 200
   }
 }
+
+{
+  "city": "singapore",
+  "data": {
+    "coord": {
+      "lon": 103.8501,
+      "lat": 1.2897
+    },
+    "weather": [
+      {
+        "id": 803,
+        "main": "Clouds",
+        "description": "broken clouds",
+        "icon": "04d"
+      }
+    ],
+    "base": "stations",
+    "main": {
+      "temp": 31.94,
+      "feels_like": 36.35,
+      "temp_min": 31.92,
+      "temp_max": 32.08,
+      "pressure": 1008,
+      "humidity": 58,
+      "sea_level": 1008,
+      "grnd_level": 1007
+    },
+    "visibility": 10000,
+    "wind": {
+      "speed": 5.14,
+      "deg": 120
+    },
+    "clouds": {
+      "all": 75
+    },
+    "dt": 1722937517,
+    "sys": {
+      "type": 1,
+      "id": 9479,
+      "country": "SG",
+      "sunrise": 1722899129,
+      "sunset": 1722942930
+    },
+    "timezone": 28800,
+    "id": 1880252,
+    "name": "Singapore",
+    "cod": 200
+  }
+}
