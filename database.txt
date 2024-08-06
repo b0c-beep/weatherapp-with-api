@@ -148,3 +148,51 @@
     "cod": 200
   }
 }
+
+{
+  "city": "braila",
+  "data": {
+    "coord": {
+      "lon": 27.9833,
+      "lat": 45.2667
+    },
+    "weather": [
+      {
+        "id": 804,
+        "main": "Clouds",
+        "description": "overcast clouds",
+        "icon": "04d"
+      }
+    ],
+    "base": "stations",
+    "main": {
+      "temp": 21.31,
+      "feels_like": 21.43,
+      "temp_min": 21.31,
+      "temp_max": 21.31,
+      "pressure": 1009,
+      "humidity": 74,
+      "sea_level": 1009,
+      "grnd_level": 1008
+    },
+    "visibility": 8285,
+    "wind": {
+      "speed": 2.04,
+      "deg": 336,
+      "gust": 2.79
+    },
+    "clouds": {
+      "all": 99
+    },
+    "dt": 1722938055,
+    "sys": {
+      "country": "RO",
+      "sunrise": 1722913122,
+      "sunset": 1722965350
+    },
+    "timezone": 10800,
+    "id": 683902,
+    "name": "Braila",
+    "cod": 200
+  }
+}
