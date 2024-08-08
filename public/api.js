@@ -1,5 +1,6 @@
 import { storeWeatherData } from './db.js';
 
+//i should hide this probably
 const apiKey = 'd2708d2ae07784e543955052d3ca73c8'; // Replace with your actual API key
 const apiUrl = `https://api.openweathermap.org/data/2.5/weather?appid=${apiKey}&units=metric&q=`;
 
