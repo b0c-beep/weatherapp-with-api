@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const express = require('express');
 const { exec } = require('child_process');
 const path = require('path');
@@ -15,6 +17,14 @@ const targetFile = 'D:/github projects/weatherapp-with-api/weatherapp-with-api/d
 
 // Serve static files (HTML, CSS, JS)
 app.use(express.static(path.join(__dirname, 'public')));
+
+//Endpoint to get api key
+app.get('/api-key', (req, res) => {
+
+    const apiKey = process.env.API_KEY;
+    res.json({apiKey});
+
+});
 
 
 function appendFileContents(sourceFile, destinationFile) {

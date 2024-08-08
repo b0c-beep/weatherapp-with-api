@@ -1,15 +1,23 @@
 import { storeWeatherData } from './db.js';
 
-//i should hide this probably
-const apiKey = 'd2708d2ae07784e543955052d3ca73c8'; // Replace with your actual API key
-const apiUrl = `https://api.openweathermap.org/data/2.5/weather?appid=${apiKey}&units=metric&q=`;
-
+var apiKey;
 const searchBox = document.querySelector('.searchbar input');
 const searchButton = document.querySelector('.search-button');
 const weatherIcon = document.querySelector('#weather-icon');
 
+async function getApiKey(){
+
+    const response = await fetch('/api-key');
+    const data = await response.json();
+
+    apiKey = data.apiKey;
+}
+
 async function checkWeather(city) {
     try {
+        await getApiKey();
+        const apiUrl = `https://api.openweathermap.org/data/2.5/weather?appid=${apiKey}&units=metric&q=`;
+
         const response = await fetch(apiUrl + city);
         const data = await response.json();
 
