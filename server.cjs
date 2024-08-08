@@ -26,7 +26,7 @@ app.get('/api-key', (req, res) => {
 
 });
 
-
+//refreshing local database file
 function appendFileContents(sourceFile, destinationFile) {
     // Resolve the full path to the files
     const sourcePath = path.resolve(sourceFile);
